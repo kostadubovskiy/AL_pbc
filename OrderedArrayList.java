@@ -75,6 +75,11 @@ public class OrderedArrayList
           }
         }
     }
+    for (int i = 0; i < _data.size() - 1; i ++) {
+        if (_data.get(i) < newVal && _data.get(i + 1) > newVal) {
+           _data.add(i + 1, newVal);
+           }
+        }
   }
 
   // inserts newVal at the appropriate index
