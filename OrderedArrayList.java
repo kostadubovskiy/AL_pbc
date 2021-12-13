@@ -41,10 +41,9 @@ public class OrderedArrayList
 
   public Integer remove( int i )
   {
-    for( int i = index; i < _size - 1; i++ ) {
-        _data[i] = _data[i+1];
-      }
-      _size--;
+    Integer temp = _data.get(i);
+    _data.remove(i);
+    return temp;
   }
 
   public int size()
@@ -62,7 +61,7 @@ public class OrderedArrayList
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-    
+
   }
 
   // inserts newVal at the appropriate index
