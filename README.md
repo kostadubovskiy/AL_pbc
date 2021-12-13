@@ -1,2 +1,6 @@
 # AL_bpk
-Lab_02 with Ben, Perry, Kosta
+TNPG: BPK
+Ben Belotser, Perry Huang, Kosta Dubovskiy
+ALTester:
+Looks to see if the current value of the array is greater than the next value. If it is, then return false, otherwise return true.
+OrderdArrayList:
