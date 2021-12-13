@@ -19,32 +19,42 @@ public class OrderedArrayList
   // instance of class ArrayList, holding objects of type Integer
   // (i.e., objects of a class that implements interface Integer)
   private ArrayList<Integer> _data;
+  private int _size;
 
   // default constructor
   // initializes instance variables
   public OrderedArrayList()
   {
-
+    _data = new ArrayList<Integer>();
+    _size = _data.size();
   }
 
   public String toString()
   {
-
+    String result = "[";
+    for (int i : _data) {
+      result += i + ",";
+    }
+    result += "]";
+    return result;
   }
 
   public Integer remove( int i )
   {
-
+    for( int i = index; i < _size - 1; i++ ) {
+        _data[i] = _data[i+1];
+      }
+      _size--;
   }
 
   public int size()
   {
-
+    return _data.size();
   }
 
   public Integer get( int i )
   {
-
+    return _data.get(i);
   }
 
   // inserts newVal at the appropriate index
@@ -52,7 +62,7 @@ public class OrderedArrayList
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-
+    
   }
 
   // inserts newVal at the appropriate index
