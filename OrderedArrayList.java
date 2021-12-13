@@ -56,12 +56,25 @@ public class OrderedArrayList
     return _data.get(i);
   }
 
+  public void swap(int i, int j) {
+    int temp = _data.get(j);
+    _data.set(j, _data.get(i));
+    _data.set(i, temp);
+
+  }
+
   // inserts newVal at the appropriate index
   // maintains ascending order of elements
   // uses a linear search to find appropriate index
   public void addLinear(Integer newVal)
   {
-
+    for (int i = 0; i < _data.size() - 1; i++) {
+        for (int j = i + 1; j < _data.size(); j++) {
+          if (_data.get(i) < _data.get(j)) {
+            this.swap(i, j);
+          }
+        }
+    }
   }
 
   // inserts newVal at the appropriate index
